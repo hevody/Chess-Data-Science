@@ -11,6 +11,7 @@ with open('config.json') as f:
 headers = config["HEADERS"]
 username = config["USERNAME"]
 game_archive_url = config["GAME_ARCHIVE_URL"].format(cc_username=username)
+length_of_game_moves = config["LENGTH_OF_GAME_MOVES"] - 1
 
 
 
@@ -35,15 +36,13 @@ def important_game_metadata(pgn1: str) -> tuple[bool, str, str]: # bool for win 
 
   board = game_func1.board()
   moves_list_uci = [move for move in game_func1.mainline_moves()]
-  moves_list = []
+  individual_game_moves_order = []
   for move in game_func1.mainline_moves():
     san_move = board.san(move)
     board.push(move=move)
-    moves_list += [san_move]
-
-  print(moves_list)
+    individual_game_moves_order += [san_move]
   
-  return win, side, moves_list
+  return win, side, individual_game_moves_order
 
 
 game_archives = perform_get_request(url=game_archive_url)["archives"]
@@ -55,12 +54,17 @@ else:
 win_rate_dict = {"White": {"Win": 0, "Lost": 0},
                  "Black": {"Win": 0, "Lost": 0}}
 
+games_move_order = {"White": {"Win": [],
+                              "Lost": []},
+                    "Black": {"Win": [],
+                              "Lost": []}}
+
 for index in range(depth_of_month, len(game_archives)):
   month_url = game_archives[index]
   games_for_that_month = perform_get_request(url=month_url)["games"]  # list
   for index_of_game in range(len(games_for_that_month)):             
     pgn_from_game = games_for_that_month[index_of_game]["pgn"]        # just use if statement onward so the cache will not be wasted and keeps the program blazing fast
-    winner, color, m_list = important_game_metadata(pgn1=pgn_from_game)
+    winner, color, ig_move_order = important_game_metadata(pgn1=pgn_from_game)
     if config["CALCULATE_WIN_RATE"]:
       if color == "White" and winner == True:
         win_rate_dict["White"]["Win"] += 1
@@ -70,8 +74,38 @@ for index in range(depth_of_month, len(game_archives)):
         win_rate_dict["Black"]["Win"] += 1
       elif color == "Black" and winner == False:
         win_rate_dict["Black"]["Lost"] += 1
+    if config["OPENING_ANALYZER"]:
+      if color == 'White' and winner == True:
+        games_move_order["White"]["Win"] += [ig_move_order]
+      if color == 'White' and winner == False:
+        games_move_order["White"]["Lost"] += [ig_move_order]
+      if color == 'Black' and winner == True:
+        games_move_order["Black"]["Win"] += [ig_move_order]
+      if color == 'Black' and winner == False:
+        games_move_order["Black"]["Lost"] += [ig_move_order]
 
 
-print(win_rate_dict)
+WhiteWinComplyLength = []
+WhiteWinUniqueLine = []
+WhiteWinDictRank = {}
 
+  # add odd number generator and even number generator in the for loops
+if config["ANALYZE_WHITE"]:
+  WhiteWin = games_move_order["White"]["Win"]
+  #WhiteLost = games_move_order["White"]["Lost"]
+  for GAMEWhiteWin in WhiteWin:
+    odd_number_generator = [x for x in range(1, len(GAMEWhiteWin), 2)]
+    WhiteWinComplyLength += [GAMEWhiteWin[:odd_number_generator[length_of_game_moves]]]
 
+  WhiteWinUniqueLine = [list(x) for x in dict.fromkeys(tuple(item) for item in WhiteWinComplyLength)]
+
+  # initializing the dictionary 
+  for keyWhiteWin in WhiteWinUniqueLine:
+    WhiteWinDictRank[str(keyWhiteWin)] = 0
+  
+
+#print(win_rate_dict)
+#print(games_move_order)
+#print(WhiteWinComplyLength)
+#print(WhiteWinUniqueLine)
+print(WhiteWinDictRank)
