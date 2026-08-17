@@ -1,0 +1,11 @@
+{
+  "HEADERS": {
+    "User-Agent": "Mozlla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Connection": "keep-alive"
+  },
+  "GAME_ARCHIVE_URL": "https://api.chess.com/pub/player/{cc_username}/games/archives",
+  "USERNAME": "hevocity",
+  "DEPTH_OF_MONTH": 1,
+  "CALCULATE_WIN_RATE": false
+}
