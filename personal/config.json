@@ -6,11 +6,10 @@
   },
   "GAME_ARCHIVE_URL": "https://api.chess.com/pub/player/{cc_username}/games/archives",
   "USERNAME": "hevocity",
-  "DEPTH_OF_MONTH": 10,
+  "DEPTH_OF_MONTH": 1,
   "CALCULATE_WIN_RATE": false, 
   "OPENING_ANALYZER": true,
-  "LENGTH_OF_GAME_MOVES": 2,
-  "TOP_MOVES": 3,
+  "LENGTH_OF_GAME_MOVES": 3,
   "ANALYZE": true,
   "MASTER_DATABASE_API_CALL": "https://explorer.lichess.org/masters?play={uci}",
   "LICHESS_HEADERS": {

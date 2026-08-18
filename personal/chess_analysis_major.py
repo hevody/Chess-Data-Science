@@ -3,6 +3,11 @@ import json
 import chess
 import chess.pgn
 from io import StringIO
+from tabulate import tabulate
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+#logging.disable(logging.CRITICAL)
 
 ### config ###
 with open('config.json') as f:
@@ -20,6 +25,7 @@ lichess_headers = config["LICHESS_HEADERS"]
 master_database_api_call = config["MASTER_DATABASE_API_CALL"]
 
 def perform_get_request(url: str, specific_headers: str) -> dict | str:
+  logging.info('Performing a GET request')
   response = requests.get(url, headers=specific_headers)
 
   if response.headers.get("Content-Type", "") == 'application/json; charset=utf-8':
@@ -28,6 +34,7 @@ def perform_get_request(url: str, specific_headers: str) -> dict | str:
     return response.text
 
 def important_game_metadata(pgn1: str) -> tuple[bool, str, str]: # bool for win or lost, str for username's side, str for the list of moves in the game
+  logging.info('Capturing the Important Game Metadata')
   game_func1 = chess.pgn.read_game(StringIO(pgn1))
   if game_func1.headers['Termination'].startswith(username):
     win = True
@@ -89,6 +96,7 @@ for index in range(depth_of_month, len(game_archives)):
         games_move_order["Black"]["Lost"] += [ig_move_order]
 
 def rank(color_side: str, outcome: str) -> dict:
+  logging.info('Ranking the moves based on frequency')
   ColorComplyLength = []
   DictTallyColorUniqueLine = {}
   ColorOutcome = games_move_order[color_side][outcome]
@@ -116,6 +124,7 @@ def rank(color_side: str, outcome: str) -> dict:
   return RANKEDDictTallyColorUniqueLine
 
 def convert_move_list_to_human_readable_pgn(moves_list: str) -> str:
+  logging.info('Converting the list of moves into human readable PGN')
   board = chess.Board()
   #move_objects = [board.parse_san(move) for move in moves_list]
 
@@ -131,6 +140,7 @@ def convert_move_list_to_human_readable_pgn(moves_list: str) -> str:
   return formatted_string
 
 def convert_to_uci(PREVIOUS_moves_list: list) -> str:
+  logging.info("Converting the previous moves into UCI to be used for the Lichess Masters Database")
   board = chess.Board()
 
   uci_moves = []
@@ -145,12 +155,13 @@ def convert_to_uci(PREVIOUS_moves_list: list) -> str:
 
 if config["ANALYZE"]:
   FrequencyLineAppears = rank('White', 'Lost')
-#  headers = ["Line", "Frequency", "Mainline Move"]
+#  
 #   data = [
 #     ["1. d4 d5 2. c4", "2", "c4"],
 #     ["Bob", "Manager", "London"],
 #     ["Charlie", "Designer", "Tokyo"]
 # ]
+  multiple_line_data = []
   for SINGULARLine in FrequencyLineAppears.keys():
     single_line_data = []
     mov_li = json.loads(SINGULARLine)
@@ -161,7 +172,16 @@ if config["ANALYZE"]:
 
     uciGET = convert_to_uci(PREVIOUS_moves_list=previous_move_only_line)
     responseMainLineMove = perform_get_request(master_database_api_call.format(uci=uciGET), specific_headers=lichess_headers)
-    mainLineMove = json.loads(responseMainLineMove)["moves"][0]["san"]
-    input()
-    #print(human_readable_line)
-    #print(thisLineFrequency)
+    try:
+      mainLineMove = json.loads(responseMainLineMove)["moves"][0]["san"]
+    except: 
+      mainLineMove = 'NULL'
+
+    single_line_data.append(human_readable_line)
+    single_line_data.append(thisLineFrequency)
+    single_line_data.append(mainLineMove)
+
+    multiple_line_data += [single_line_data]
+
+  headers = ["Line", "Frequency", "Mainline Move"]
+  print(tabulate(multiple_line_data, headers=headers, tablefmt="grid"))
