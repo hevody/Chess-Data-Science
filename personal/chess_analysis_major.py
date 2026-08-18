@@ -84,28 +84,32 @@ for index in range(depth_of_month, len(game_archives)):
       if color == 'Black' and winner == False:
         games_move_order["Black"]["Lost"] += [ig_move_order]
 
+def rankWhite(outcome: str) -> dict:
+  WhiteComplyLength = []
+  DictTallylWhiteUniqueLine = {}
+  White = games_move_order["White"][outcome]
+  for GAMEWhite in White:
+    odd_number_generator = [x for x in range(1, len(GAMEWhite), 2)]
+    try:
+      WhiteComplyLength += [GAMEWhite[:odd_number_generator[length_of_game_moves]]]
+    except:
+      WhiteComplyLength += [GAMEWhite]
 
-WhiteWinComplyLength = []
-WhiteWinUniqueLine = []
-WhiteWinDictRank = {}
+  KeysWhiteUniqueLine = [list(x) for x in dict.fromkeys(tuple(item) for item in WhiteComplyLength)]
+  StringKeysWhiteUniqueLine = [json.dumps(sublist) for sublist in KeysWhiteUniqueLine]
+  DictTallylWhiteUniqueLine = dict.fromkeys(StringKeysWhiteUniqueLine, 0)
 
-  # add odd number generator and even number generator in the for loops
+  for key in list(DictTallylWhiteUniqueLine.keys()):
+    for SINGULARWhiteLength in WhiteComplyLength:
+      if SINGULARWhiteLength == json.loads(key):
+        DictTallylWhiteUniqueLine[key] += 1
+
+  RANKEDDictTallyWhiteUniqueLine =  dict(sorted(DictTallylWhiteUniqueLine.items(), key=lambda item: item[1], reverse=True))
+
+  return RANKEDDictTallyWhiteUniqueLine
+
 if config["ANALYZE_WHITE"]:
-  WhiteWin = games_move_order["White"]["Win"]
-  #WhiteLost = games_move_order["White"]["Lost"]
-  for GAMEWhiteWin in WhiteWin:
-    odd_number_generator = [x for x in range(1, len(GAMEWhiteWin), 2)]
-    WhiteWinComplyLength += [GAMEWhiteWin[:odd_number_generator[length_of_game_moves]]]
-
-  WhiteWinUniqueLine = [list(x) for x in dict.fromkeys(tuple(item) for item in WhiteWinComplyLength)]
-
-  # initializing the dictionary 
-  for keyWhiteWin in WhiteWinUniqueLine:
-    WhiteWinDictRank[str(keyWhiteWin)] = 0
+  print(rankWhite('Win'))
+  print(rankWhite('Lost'))
   
 
-#print(win_rate_dict)
-#print(games_move_order)
-#print(WhiteWinComplyLength)
-#print(WhiteWinUniqueLine)
-print(WhiteWinDictRank)
