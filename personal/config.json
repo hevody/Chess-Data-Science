@@ -11,6 +11,5 @@
   "OPENING_ANALYZER": true,
   "LENGTH_OF_GAME_MOVES": 2,
   "TOP_MOVES": 3,
-  "ANALYZE_WHITE": true,
-  "ANALYZE_BLACK": false
+  "ANALYZE": true
 }

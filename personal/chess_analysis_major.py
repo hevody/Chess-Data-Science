@@ -84,32 +84,34 @@ for index in range(depth_of_month, len(game_archives)):
       if color == 'Black' and winner == False:
         games_move_order["Black"]["Lost"] += [ig_move_order]
 
-def rankWhite(outcome: str) -> dict:
-  WhiteComplyLength = []
-  DictTallylWhiteUniqueLine = {}
-  White = games_move_order["White"][outcome]
-  for GAMEWhite in White:
-    odd_number_generator = [x for x in range(1, len(GAMEWhite), 2)]
+def rank(color_side: str, outcome: str) -> dict:
+  ColorComplyLength = []
+  DictTallyColorUniqueLine = {}
+  ColorOutcome = games_move_order[color_side][outcome]
+  for GAMEColor in ColorOutcome:
+    if color_side == 'White':
+      oe_number_generator = [x for x in range(1, len(GAMEColor), 2)]
+    if color_side == 'Black':
+      oe_number_generator = [x for x in range(2, len(GAMEColor), 2)]
     try:
-      WhiteComplyLength += [GAMEWhite[:odd_number_generator[length_of_game_moves]]]
+      ColorComplyLength += [GAMEColor[:oe_number_generator[length_of_game_moves]]]
     except:
-      WhiteComplyLength += [GAMEWhite]
+      ColorComplyLength += [GAMEColor]
 
-  KeysWhiteUniqueLine = [list(x) for x in dict.fromkeys(tuple(item) for item in WhiteComplyLength)]
-  StringKeysWhiteUniqueLine = [json.dumps(sublist) for sublist in KeysWhiteUniqueLine]
-  DictTallylWhiteUniqueLine = dict.fromkeys(StringKeysWhiteUniqueLine, 0)
+  KeysColorUniqueLine = [list(x) for x in dict.fromkeys(tuple(item) for item in ColorComplyLength)]
+  StringKeysColorUniqueLine = [json.dumps(sublist) for sublist in KeysColorUniqueLine]
+  DictTallyColorUniqueLine = dict.fromkeys(StringKeysColorUniqueLine, 0)
 
-  for key in list(DictTallylWhiteUniqueLine.keys()):
-    for SINGULARWhiteLength in WhiteComplyLength:
-      if SINGULARWhiteLength == json.loads(key):
-        DictTallylWhiteUniqueLine[key] += 1
+  for key in list(DictTallyColorUniqueLine.keys()):
+    for SINGULARColorLength in ColorComplyLength:
+      if SINGULARColorLength == json.loads(key):
+        DictTallyColorUniqueLine[key] += 1
 
-  RANKEDDictTallyWhiteUniqueLine =  dict(sorted(DictTallylWhiteUniqueLine.items(), key=lambda item: item[1], reverse=True))
+  RANKEDDictTallyColorUniqueLine =  dict(sorted(DictTallyColorUniqueLine.items(), key=lambda item: item[1], reverse=True))
 
-  return RANKEDDictTallyWhiteUniqueLine
+  return RANKEDDictTallyColorUniqueLine
 
-if config["ANALYZE_WHITE"]:
-  print(rankWhite('Win'))
-  print(rankWhite('Lost'))
+if config["ANALYZE"]:
+  print(rank('Black', 'Lost'))
   
 
