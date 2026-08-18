@@ -14,5 +14,7 @@
   "MASTER_DATABASE_API_CALL": "https://explorer.lichess.org/masters?play={uci}",
   "LICHESS_HEADERS": {
     "Authorization": "Bearer {token}"
-  }
+  },
+  "COLOR_SIDE": "White",
+  "OUTCOME": "Win"
 }

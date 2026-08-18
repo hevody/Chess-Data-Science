@@ -23,6 +23,8 @@ length_of_game_moves = config["LENGTH_OF_GAME_MOVES"] - 1
 config["LICHESS_HEADERS"]["Authorization"]= config["LICHESS_HEADERS"]["Authorization"].format(token=lc_token)
 lichess_headers = config["LICHESS_HEADERS"]
 master_database_api_call = config["MASTER_DATABASE_API_CALL"]
+color_of_the_side = config["COLOR_SIDE"]
+games_outcome = config["OUTCOME"]
 
 def perform_get_request(url: str, specific_headers: str) -> dict | str:
   logging.info('Performing a GET request')
@@ -154,13 +156,8 @@ def convert_to_uci(PREVIOUS_moves_list: list) -> str:
   return uciANDJoined
 
 if config["ANALYZE"]:
-  FrequencyLineAppears = rank('White', 'Lost')
-#  
-#   data = [
-#     ["1. d4 d5 2. c4", "2", "c4"],
-#     ["Bob", "Manager", "London"],
-#     ["Charlie", "Designer", "Tokyo"]
-# ]
+  FrequencyLineAppears = rank(color_side=color_of_the_side, outcome=games_outcome)
+
   multiple_line_data = []
   for SINGULARLine in FrequencyLineAppears.keys():
     single_line_data = []
