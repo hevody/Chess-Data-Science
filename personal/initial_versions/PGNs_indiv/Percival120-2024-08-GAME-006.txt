@@ -1,0 +1,23 @@
+[TimeControl "600"]
+[Termination "STMANAGUA won - game abandoned"]
+[StartTime "02:04:24"]
+[EndDate "2024.08.14"]
+[EndTime "02:16:46"]
+[Link "https://www.chess.com/game/live/108707193710"]
+
+1. d4 {[%clk 0:09:59.9]} 1... d6 {[%clk 0:09:57.9]} 2. c4 {[%clk 0:09:52.7]} 2... e5 {[%clk 0:09:55.8]} 3. d5 {[%clk 0:09:49.9]} 3... f6 {[%clk 0:09:53.1]} 4. Nc3 {[%clk 0:09:43.9]} 4... c6 {[%clk 0:09:50]} 5. Nf3 {[%clk 0:09:31.1]} 5... a5 {[%clk 0:09:41.6]} 6. h3 {[%clk 0:09:18.5]} 6... h5 {[%clk 0:09:38]} 7. e3 {[%clk 0:08:54.6]} 7... Na6 {[%clk 0:09:13.1]} 8. Bd3 {[%clk 0:08:49.1]} 8... Ne7 {[%clk 0:09:01.7]} 9. O-O {[%clk 0:08:34.4]} 9... Bf5 {[%clk 0:08:44]} 10. e4 {[%clk 0:08:12.8]} 10... Bg6 {[%clk 0:08:16.3]} 11. Qa4 {[%clk 0:07:56.4]} 11... Qd7 {[%clk 0:08:03.2]} 12. a3 {[%clk 0:05:36.7]} 12... Nc5 {[%clk 0:07:57.6]} 13. Qd1 {[%clk 0:05:09.9]} 13... Nxd3 {[%clk 0:07:47.1]} 14. Qxd3 {[%clk 0:05:03]} 14... cxd5 {[%clk 0:07:43.5]} 15. cxd5 {[%clk 0:04:54.6]} 15... f5 {[%clk 0:07:05.1]} 16. Qb5 {[%clk 0:04:14.8]} 16... Qxb5 {[%clk 0:06:37.6]} 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.08.14"]
+[Round "-"]
+[White "Percival120"]
+[Black "INA_ROGII"]
+[Result "1-0"]
+[CurrentPosition "rn2k1B1/1pp2p2/5q2/p2pp3/8/P1P4P/2Q2P2/R4RK1 b q -"]
+[Timezone "UTC"]
+[ECO "A40"]
+[ECOUrl "https://www.chess.com/openings/Queens-Pawn-Opening-Horwitz-Defense-2.c4"]
+[UTCDate "2024.08.14"]
+[UTCTime "01:56:06"]

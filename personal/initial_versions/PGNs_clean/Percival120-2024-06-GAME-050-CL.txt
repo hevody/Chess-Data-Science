@@ -1,0 +1,22 @@
+[EndTime "11:10:32"]
+[Link "https://www.chess.com/game/live/107851921576"]
+
+1. Nf3 {[%clk 0:09:29.5]} 1... e6 {[%clk 0:09:57.3]} 2. g3 {[%clk 0:09:19.8]} 2... c6 {[%clk 0:09:44.9]} 3. Nh4 {[%clk 0:09:09]} 3... Qg5 {[%clk 0:09:32.9]} 4. e3 {[%clk 0:08:59.6]} 4... Qc5 {[%clk 0:09:01.8]} 5. b4 {[%clk 0:08:48.6]} 5... Qxb4 {[%clk 0:08:56.3]} 6. Rg1 {[%clk 0:08:39.3]} 6... Qc5 {[%clk 0:08:43.2]} 7. Bd3 {[%clk 0:08:30.7]} 7... g5 {[%clk 0:08:40.3]} 8. c4 {[%clk 0:08:19.8]} 8... Qe5 {[%clk 0:08:22.6]} 9. h3 {[%clk 0:08:09.6]} 9... Qxa1 {[%clk 0:08:19.3]} 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.06.20"]
+[Round "-"]
+[White "hardish10"]
+[Black "Percival120"]
+[Result "1-0"]
+[CurrentPosition "1rb1kq2/ppppb1pp/8/3PPn2/1P6/2P1B3/P4PPP/R2Q1RK1 b - -"]
+[Timezone "UTC"]
+[ECO "C50"]
+[ECOUrl "https://www.chess.com/openings/Giuoco-Piano-Game-Four-Knights-Game"]
+[UTCDate "2024.06.20"]
+[UTCTime "10:59:57"]
+[WhiteElo "815"]
+[BlackElo "782"]
+[TimeControl "600"]

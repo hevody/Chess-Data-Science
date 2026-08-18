@@ -1,0 +1,22 @@
+[EndTime "01:17:52"]
+[Link "https://www.chess.com/game/live/107878430292"]
+
+1. e4 {[%clk 0:09:59.9]} 1... c5 {[%clk 0:09:57.1]} 2. Qh5 {[%clk 0:09:55.7]} 2... e6 {[%clk 0:09:54]} 3. Bc4 {[%clk 0:09:54.2]} 3... Nc6 {[%clk 0:09:49.8]} 4. c3 {[%clk 0:09:52]} 4... Nf6 {[%clk 0:09:44.6]} 5. Qf3 {[%clk 0:09:50.2]} 5... Ne5 {[%clk 0:09:42.9]} 6. Qe2 {[%clk 0:09:48]} 6... Nxc4 {[%clk 0:09:39.3]} 7. Qxc4 {[%clk 0:09:46.1]} 7... Be7 {[%clk 0:09:30]} 8. e5 {[%clk 0:09:43.8]} 8... Nd5 {[%clk 0:09:19.1]} 9. Nf3 {[%clk 0:09:41.5]} 9... O-O {[%clk 0:09:06.8]} 10. Qg4 {[%clk 0:09:39.1]} 10... f6 {[%clk 0:09:01.3]} 11. exf6 {[%clk 0:09:24.8]} 11... Nxf6 {[%clk 0:08:59]} 12. Qg3 {[%clk 0:09:17.1]} 12... d5 {[%clk 0:08:49.9]} 13. Ne5 {[%clk 0:09:15.2]} 13... Bd6 {[%clk 0:08:45.4]} 14. f4 {[%clk 0:09:11.6]} 14... Ne4 {[%clk 0:08:34.6]} 15. Qg4 {[%clk 0:08:56.9]} 15... Bxe5 {[%clk 0:08:18.8]} 16. fxe5 {[%clk 0:08:55]} 16... Nf2 {[%clk 0:08:11]} 17. Qh3 {[%clk 0:08:33.3]} 17... Nxh3 {[%clk 0:08:09.1]} 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.06.22"]
+[Round "-"]
+[White "Percival120"]
+[Black "theindiansking"]
+[Result "0-1"]
+[CurrentPosition "5r1k/p5b1/3p3p/3Pp1q1/4r1P1/6Q1/1P1Bn3/2K1RR2 w - -"]
+[Timezone "UTC"]
+[ECO "E76"]
+[ECOUrl "https://www.chess.com/openings/Kings-Indian-Defense-Four-Pawns-Attack-5...O-O-6.Nf3-Bg4"]
+[UTCDate "2024.06.22"]
+[UTCTime "01:02:41"]
+[WhiteElo "830"]
+[BlackElo "828"]
+[TimeControl "600"]

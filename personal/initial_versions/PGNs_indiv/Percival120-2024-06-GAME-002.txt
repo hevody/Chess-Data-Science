@@ -1,0 +1,23 @@
+[EndTime "12:30:27"]
+[Link "https://www.chess.com/game/live/107657310310"]
+
+1. e4 {[%clk 0:09:59.5]} 1... e5 {[%clk 0:09:41]} 2. Nf3 {[%clk 0:09:57.7]} 2... Nc6 {[%clk 0:08:45.3]} 3. c3 {[%clk 0:09:52.4]} 1-0
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.06.08"]
+[Round "-"]
+[White "Enigmatico_27"]
+[Black "Percival120"]
+[Result "0-1"]
+[CurrentPosition "rn2k2r/ppp2ppp/8/4b3/6b1/2P4P/PP4P1/RNB1q1KR w kq -"]
+[Timezone "UTC"]
+[ECO "C41"]
+[ECOUrl "https://www.chess.com/openings/Philidor-Defense-3.Bc4-Nf6"]
+[UTCDate "2024.06.08"]
+[UTCTime "12:22:11"]
+[WhiteElo "393"]
+[BlackElo "577"]
+[TimeControl "600"]
+[Termination "Percival120 won by checkmate"]

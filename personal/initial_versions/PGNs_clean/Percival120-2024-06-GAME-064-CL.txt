@@ -1,0 +1,22 @@
+[EndTime "09:05:54"]
+[Link "https://www.chess.com/game/live/112699148571"]
+
+1. e4 {[%clk 0:09:59.2]} 1... c5 {[%clk 0:09:58.7]} 2. b4 {[%clk 0:09:34.4]} 2... e5 {[%clk 0:09:48.8]} 3. Nf3 {[%clk 0:09:20.9]} 3... d6 {[%clk 0:09:45.1]} 4. Bb5+ {[%clk 0:09:09.3]} 4... Nc6 {[%clk 0:09:38.2]} 5. O-O {[%clk 0:08:54.6]} 5... Bd7 {[%clk 0:09:33.9]} 6. Bc4 {[%clk 0:08:33]} 6... Nxb4 {[%clk 0:09:27.9]} 7. d3 {[%clk 0:08:11.8]} 7... Nf6 {[%clk 0:09:11.3]} 8. Ng5 {[%clk 0:08:07.7]} 8... d5 {[%clk 0:08:56.8]} 9. Bxd5 {[%clk 0:07:34]} 9... Nbxd5 {[%clk 0:08:51.5]} 10. exd5 {[%clk 0:07:33.3]} 10... Nxd5 {[%clk 0:08:50.2]} 11. Re1 {[%clk 0:07:24.7]} 11... Be7 {[%clk 0:08:25.2]} 12. Rxe5 {[%clk 0:07:19.2]} 12... Nb6 {[%clk 0:08:08.5]} 13. Qf3 {[%clk 0:07:02.9]} 13... O-O {[%clk 0:08:04.8]} 14. Ba3 {[%clk 0:06:30.6]} 14... Bc6 {[%clk 0:08:02.6]} 15. Qe3 {[%clk 0:06:17]} 15... Nd5 {[%clk 0:07:49]} 16. Qg3 {[%clk 0:05:55.4]} 16... b6 {[%clk 0:07:20.8]} 17. Nd2 {[%clk 0:05:39.3]} 17... Bf6 {[%clk 0:07:18.9]} 18. Rf5 {[%clk 0:05:28.9]} 18... Bxa1 {[%clk 0:07:03.6]} 19. Nc4 {[%clk 0:05:04.3]} 19... Qe7 {[%clk 0:06:50.4]} 20. Ne3 {[%clk 0:04:49.3]} 20... Nxe3 {[%clk 0:06:41.7]} 21. fxe3 {[%clk 0:04:48.3]} 21... h6 {[%clk 0:06:03.7]} 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.06.21"]
+[Round "-"]
+[White "Blakbull"]
+[Black "Percival120"]
+[Result "1-0"]
+[CurrentPosition "r4rk1/p4pp1/1pnp3p/2p1p2q/4N2P/1P1P4/P1P2P2/R1BQK1R1 w Q -"]
+[Timezone "UTC"]
+[ECO "A00"]
+[ECOUrl "https://www.chess.com/openings/Kings-Fianchetto-Opening-Sicilian-Invitation-2.Bg2"]
+[UTCDate "2024.06.21"]
+[UTCTime "08:47:34"]
+[WhiteElo "741"]
+[BlackElo "742"]
+[TimeControl "600"]

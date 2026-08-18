@@ -1,0 +1,23 @@
+[EndTime "09:05:07"]
+[Link "https://www.chess.com/game/live/107703192728"]
+
+1. e4 {[%clk 0:09:58.9]} 1... Nf6 {[%clk 0:09:58.6]} 2. Nc3 {[%clk 0:09:53.4]} 2... Nc6 {[%clk 0:09:56]} 3. d4 {[%clk 0:09:50]} 3... b6 {[%clk 0:09:54.3]} 4. e5 {[%clk 0:09:42.6]} 4... Ng8 {[%clk 0:09:49.2]} 5. f4 {[%clk 0:09:38.4]} 5... Bb7 {[%clk 0:09:38.3]} 6. Nf3 {[%clk 0:09:33.6]} 6... g6 {[%clk 0:09:22.4]} 7. Bc4 {[%clk 0:09:26]} 7... e6 {[%clk 0:08:37.5]} 8. d5 {[%clk 0:09:12.4]} 8... exd5 {[%clk 0:08:35]} 9. Bxd5 {[%clk 0:09:10.5]} 9... Na5 {[%clk 0:08:15]} 10. Ng5 {[%clk 0:09:03.1]} 10... Bxd5 {[%clk 0:08:08.9]} 11. Qxd5 {[%clk 0:08:58.5]} 11... c6 {[%clk 0:08:05.8]} 12. Qxf7# {[%clk 0:08:54.9]} 1-0
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.06.11"]
+[Round "-"]
+[White "AnitaRovcanin"]
+[Black "Percival120"]
+[Result "0-1"]
+[CurrentPosition "r1b1kbnr/3p1ppp/4p3/2p5/8/2n5/PPP2P1P/R1BqKR2 w kq -"]
+[Timezone "UTC"]
+[ECO "B30"]
+[ECOUrl "https://www.chess.com/openings/Sicilian-Defense-Old-Sicilian-Variation-3.Bc4"]
+[UTCDate "2024.06.11"]
+[UTCTime "08:58:51"]
+[WhiteElo "698"]
+[BlackElo "702"]
+[TimeControl "600"]
+[Termination "Percival120 won by checkmate"]

@@ -2,7 +2,7 @@ import os
 import copy
 
 
-os.chdir('./PGNs_clean')
+os.chdir('./')
 # CONFIGURING FILES THAT ARE NOT SUPPOSED TO BE INCLUDED BECAUSE IT WILL CAUSE INDEX ERROR
 games = os.listdir()
 removes = []

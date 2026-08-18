@@ -1,0 +1,23 @@
+[EndTime "00:29:43"]
+[Link "https://www.chess.com/game/live/107682112888"]
+
+1. d4 {[%clk 0:09:55.3]} 1... d5 {[%clk 0:09:55.1]} 2. Nc3 {[%clk 0:09:50.1]} 2... Nf6 {[%clk 0:09:47.1]} 3. e3 {[%clk 0:09:47.8]} 3... e6 {[%clk 0:09:44.1]} 4. Nf3 {[%clk 0:09:34.6]} 4... Nc6 {[%clk 0:09:32.1]} 5. Bb5 {[%clk 0:09:26.3]} 5... Bd7 {[%clk 0:09:28]} 0-1
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.06.10"]
+[Round "-"]
+[White "arghadeep12345"]
+[Black "Percival120"]
+[Result "0-1"]
+[CurrentPosition "r7/4P2Q/1k4p1/1q3b2/3P1P2/1P5P/8/5RK1 w - -"]
+[Timezone "UTC"]
+[ECO "C20"]
+[ECOUrl "https://www.chess.com/openings/Kings-Pawn-Opening-1...e5"]
+[UTCDate "2024.06.10"]
+[UTCTime "00:08:14"]
+[WhiteElo "687"]
+[BlackElo "681"]
+[TimeControl "600"]
+[Termination "Percival120 won on time"]

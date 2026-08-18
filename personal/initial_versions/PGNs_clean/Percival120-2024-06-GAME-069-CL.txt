@@ -1,0 +1,22 @@
+[EndTime "10:05:49"]
+[Link "https://www.chess.com/game/live/107867205244"]
+
+1. d4 {[%clk 0:09:59.9]} 1... d5 {[%clk 0:09:58]} 2. c4 {[%clk 0:09:58.7]} 2... e6 {[%clk 0:09:56.4]} 3. Nc3 {[%clk 0:09:56.3]} 3... Bb4 {[%clk 0:09:40.2]} 4. Bd2 {[%clk 0:09:51]} 4... dxc4 {[%clk 0:09:30.3]} 5. e4 {[%clk 0:09:46.8]} 5... Qxd4 {[%clk 0:09:24.5]} 6. Nf3 {[%clk 0:09:34.5]} 6... Qd8 {[%clk 0:09:11.9]} 7. Bxc4 {[%clk 0:09:27.6]} 7... Nc6 {[%clk 0:08:56.5]} 8. Bb5 {[%clk 0:09:25]} 8... a6 {[%clk 0:08:49]} 9. Bxc6+ {[%clk 0:09:23.4]} 9... bxc6 {[%clk 0:08:47.7]} 10. Qa4 {[%clk 0:09:18.4]} 10... Bb7 {[%clk 0:08:46.1]} 11. Qxb4 {[%clk 0:09:16.4]} 11... Rb8 {[%clk 0:08:43.7]} 12. Qa4 {[%clk 0:09:11.8]} 12... Ne7 {[%clk 0:08:34.5]} 13. O-O-O {[%clk 0:09:10.1]} 13... O-O {[%clk 0:08:32.9]} 14. Bg5 {[%clk 0:09:03.7]} 14... h6 {[%clk 0:08:25.4]} 15. Rxd8 {[%clk 0:09:01.5]} 15... Rfxd8 {[%clk 0:08:21.9]} 16. Bxe7 {[%clk 0:08:58]} 16... Re8 {[%clk 0:08:21.8]} 17. Bb4 {[%clk 0:08:34.4]} 17... f5 {[%clk 0:08:14.4]} 18. e5 {[%clk 0:08:31.4]} 18... Ra8 {[%clk 0:07:58.4]} 19. Qc2 {[%clk 0:08:05.7]} 19... a5 {[%clk 0:07:56.5]} 20. Bc5 {[%clk 0:07:56.7]} 20... g5 {[%clk 0:07:41.6]} 21. h3 {[%clk 0:07:38.9]} 21... Rf8 {[%clk 0:07:33.7]} 22. Rd1 {[%clk 0:07:28.9]} 22... g4 {[%clk 0:07:20.9]} 23. hxg4 {[%clk 0:07:26.6]} 23... fxg4 {[%clk 0:07:17.8]} 24. Nd4 {[%clk 0:07:09.6]} 24... Rad8 {[%clk 0:07:15]} 25. Nxe6 {[%clk 0:07:05]} 25... Rxd1+ {[%clk 0:07:10.5]} 26. Kxd1 {[%clk 0:07:01.4]} 26... Re8 {[%clk 0:07:04.9]} 27. Qg6+ {[%clk 0:06:57.3]} 1-0
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.06.21"]
+[Round "-"]
+[White "ahmad-rosidin"]
+[Black "Percival120"]
+[Result "0-1"]
+[CurrentPosition "8/7p/Kq6/8/3b3k/4p3/8/8 w - -"]
+[Timezone "UTC"]
+[ECO "B30"]
+[ECOUrl "https://www.chess.com/openings/Sicilian-Defense-Old-Sicilian-Variation-3.Bc4"]
+[UTCDate "2024.06.21"]
+[UTCTime "09:45:26"]
+[WhiteElo "722"]
+[BlackElo "782"]
+[TimeControl "600"]

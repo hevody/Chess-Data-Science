@@ -1,0 +1,23 @@
+[EndTime "11:26:11"]
+[Link "https://www.chess.com/game/live/107852099684"]
+
+1. e4 {[%clk 0:09:53.2]} 1... e5 {[%clk 0:09:57]} 2. Nf3 {[%clk 0:09:44.8]} 2... Nc6 {[%clk 0:09:52.9]} 3. Bb5 {[%clk 0:09:35.7]} 3... a6 {[%clk 0:09:48.8]} 4. Ba4 {[%clk 0:09:27.2]} 4... b5 {[%clk 0:09:47]} 5. Bb3 {[%clk 0:09:18.6]} 5... Nf6 {[%clk 0:09:45.9]} 6. O-O {[%clk 0:09:09.4]} 6... h5 {[%clk 0:09:41.6]} 7. Nc3 {[%clk 0:08:59.9]} 7... h4 {[%clk 0:09:20.5]} 8. Bxf7+ {[%clk 0:08:48.2]} 8... Kxf7 {[%clk 0:09:02.9]} 9. Nd5 {[%clk 0:08:38.4]} 9... Nxd5 {[%clk 0:08:33.6]} 10. exd5 {[%clk 0:08:28.1]} 10... e4 {[%clk 0:08:32]} 11. dxc6 {[%clk 0:08:20]} 11... exf3 {[%clk 0:08:30.7]} 12. Qxf3+ {[%clk 0:08:12.9]} 12... Kg8 {[%clk 0:08:14.6]} 13. Qd5+ {[%clk 0:08:02.6]} 13... Kh7 {[%clk 0:07:59.4]} 14. Qf5+ {[%clk 0:07:51.8]} 14... Kg8 {[%clk 0:07:55]} 15. Qd5+ {[%clk 0:07:43.5]} 15... Kh7 {[%clk 0:07:51.8]} 16. Qh5+ {[%clk 0:07:33.3]} 16... Kg8 {[%clk 0:07:47.1]} 17. Qd5+ {[%clk 0:07:24.3]} 1/2-1/2
+
+
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2024.06.20"]
+[Round "-"]
+[White "BuddyBusko"]
+[Black "Percival120"]
+[Result "1-0"]
+[CurrentPosition "6rk/3Q2b1/p5pp/1p2pp2/8/2P1P2P/PP3PP1/R2R2K1 b - -"]
+[Timezone "UTC"]
+[ECO "A48"]
+[ECOUrl "https://www.chess.com/openings/Indian-Game-East-Indian-London-System-3...Bg7-4.c3-O-O-5.e3"]
+[UTCDate "2024.06.20"]
+[UTCTime "11:11:12"]
+[WhiteElo "762"]
+[BlackElo "764"]
+[TimeControl "600"]
+[Termination "BuddyBusko won by resignation"]

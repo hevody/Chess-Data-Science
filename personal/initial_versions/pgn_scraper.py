@@ -17,7 +17,7 @@ for account in accounts:
         for month in months:
             print(f'[*] Getting history for: {account} on {month}-{year}')
             
-            pgnRequester = requests.get(f'http://api.chess.com/pub/player/{account}/games/{year}/{month}/pgn', headers=headers)
+            pgnRequester = requests.get(f'https://api.chess.com/pub/player/{account}/games/{year}/{month}/pgn', headers=headers)
             pgnRequester.raise_for_status()
             pgnFile = open(f'{account}-{year}-{month}.txt', 'wb')  
             for chunk in pgnRequester.iter_content(100000):    

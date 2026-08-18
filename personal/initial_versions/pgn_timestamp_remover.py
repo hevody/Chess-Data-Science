@@ -7,9 +7,13 @@ import os
 def timestamp_remover(game):
     with open(game) as f:
         contents = f.readlines()
-
+ 
     keeps = contents[:22]
-    timestamped_pgn = contents[22]
+
+    try:
+        timestamped_pgn = contents[22]
+    except:
+        return
 
 
 
