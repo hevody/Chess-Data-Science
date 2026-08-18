@@ -11,5 +11,9 @@
   "OPENING_ANALYZER": true,
   "LENGTH_OF_GAME_MOVES": 2,
   "TOP_MOVES": 3,
-  "ANALYZE": true
+  "ANALYZE": true,
+  "MASTER_DATABASE_API_CALL": "https://explorer.lichess.org/masters?play={uci}",
+  "LICHESS_HEADERS": {
+    "Authorization": "Bearer {token}"
+  }
 }

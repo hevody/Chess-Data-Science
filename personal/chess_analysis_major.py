@@ -7,21 +7,25 @@ from io import StringIO
 ### config ###
 with open('config.json') as f:
   config = json.load(fp=f)
+with open('lc_token.env') as f:
+  lc_token = f.read()
 
-headers = config["HEADERS"]
+
+general_headers = config["HEADERS"]
 username = config["USERNAME"]
 game_archive_url = config["GAME_ARCHIVE_URL"].format(cc_username=username)
 length_of_game_moves = config["LENGTH_OF_GAME_MOVES"] - 1
+config["LICHESS_HEADERS"]["Authorization"]= config["LICHESS_HEADERS"]["Authorization"].format(token=lc_token)
+lichess_headers = config["LICHESS_HEADERS"]
+master_database_api_call = config["MASTER_DATABASE_API_CALL"]
 
-
-
-def perform_get_request(url: str) -> dict | str:
-  response = requests.get(url, headers=headers)
+def perform_get_request(url: str, specific_headers: str) -> dict | str:
+  response = requests.get(url, headers=specific_headers)
 
   if response.headers.get("Content-Type", "") == 'application/json; charset=utf-8':
     return response.json()
   else:
-    return response.text()
+    return response.text
 
 def important_game_metadata(pgn1: str) -> tuple[bool, str, str]: # bool for win or lost, str for username's side, str for the list of moves in the game
   game_func1 = chess.pgn.read_game(StringIO(pgn1))
@@ -45,7 +49,7 @@ def important_game_metadata(pgn1: str) -> tuple[bool, str, str]: # bool for win 
   return win, side, individual_game_moves_order
 
 
-game_archives = perform_get_request(url=game_archive_url)["archives"]
+game_archives = perform_get_request(url=game_archive_url, specific_headers=general_headers)["archives"]
 if config["DEPTH_OF_MONTH"] == 0: # means entire game archive
   depth_of_month = 0
 else:
@@ -61,7 +65,7 @@ games_move_order = {"White": {"Win": [],
 
 for index in range(depth_of_month, len(game_archives)):
   month_url = game_archives[index]
-  games_for_that_month = perform_get_request(url=month_url)["games"]  # list
+  games_for_that_month = perform_get_request(url=month_url, specific_headers=general_headers)["games"]  # list
   for index_of_game in range(len(games_for_that_month)):             
     pgn_from_game = games_for_that_month[index_of_game]["pgn"]        # just use if statement onward so the cache will not be wasted and keeps the program blazing fast
     winner, color, ig_move_order = important_game_metadata(pgn1=pgn_from_game)
@@ -111,7 +115,53 @@ def rank(color_side: str, outcome: str) -> dict:
 
   return RANKEDDictTallyColorUniqueLine
 
-if config["ANALYZE"]:
-  print(rank('Black', 'Lost'))
-  
+def convert_move_list_to_human_readable_pgn(moves_list: str) -> str:
+  board = chess.Board()
+  #move_objects = [board.parse_san(move) for move in moves_list]
 
+  move_objects = []
+  for move in moves_list:
+    parsed_move = board.parse_san(move)
+    move_objects.append(parsed_move)
+    board.push(parsed_move)
+
+  board.reset()
+
+  formatted_string = board.variation_san(move_objects)
+  return formatted_string
+
+def convert_to_uci(PREVIOUS_moves_list: list) -> str:
+  board = chess.Board()
+
+  uci_moves = []
+  for move in PREVIOUS_moves_list:
+    parsed_move = board.parse_san(move)
+    uci_moves.append(parsed_move.uci())
+    board.push(parsed_move)
+
+  uciANDJoined = ','.join(uci_moves)
+
+  return uciANDJoined
+
+if config["ANALYZE"]:
+  FrequencyLineAppears = rank('White', 'Lost')
+#  headers = ["Line", "Frequency", "Mainline Move"]
+#   data = [
+#     ["1. d4 d5 2. c4", "2", "c4"],
+#     ["Bob", "Manager", "London"],
+#     ["Charlie", "Designer", "Tokyo"]
+# ]
+  for SINGULARLine in FrequencyLineAppears.keys():
+    single_line_data = []
+    mov_li = json.loads(SINGULARLine)
+    human_readable_line = convert_move_list_to_human_readable_pgn(moves_list=mov_li)
+    thisLineFrequency = FrequencyLineAppears[SINGULARLine] 
+
+    previous_move_only_line = mov_li[:-1]
+
+    uciGET = convert_to_uci(PREVIOUS_moves_list=previous_move_only_line)
+    responseMainLineMove = perform_get_request(master_database_api_call.format(uci=uciGET), specific_headers=lichess_headers)
+    mainLineMove = json.loads(responseMainLineMove)["moves"][0]["san"]
+    input()
+    #print(human_readable_line)
+    #print(thisLineFrequency)
