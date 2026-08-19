@@ -1,8 +1,0 @@
-[TimeControl "600"]
-[Termination "BananaManDeluxe won by resignation"]
-[StartTime "12:00:29"]
-[EndDate "2024.08.12"]
-[EndTime "12:02:32"]
-[Link "https://www.chess.com/game/live/117202854187"]
-
-1. d4 {[%clk 0:10:00]} 1... d6 {[%clk 0:10:00]} 2. c4 {[%clk 0:09:57.7]} 2... g6 {[%clk 0:09:57.7]} 3. Nc3 {[%clk 0:09:54.4]} 3... Bg7 {[%clk 0:09:56.4]} 4. e3 {[%clk 0:09:52.9]} 4... Nf6 {[%clk 0:09:52.6]} 5. Nf3 {[%clk 0:09:48.5]} 5... O-O {[%clk 0:09:50]} 6. Be2 {[%clk 0:09:37.8]} 6... b6 {[%clk 0:09:46.5]} 7. O-O {[%clk 0:09:35.5]} 7... Bb7 {[%clk 0:09:45.5]} 8. a3 {[%clk 0:09:30.7]} 8... Nbd7 {[%clk 0:09:40.9]} 9. Re1 {[%clk 0:09:22.1]} 9... e5 {[%clk 0:09:38.2]} 10. Bd3 {[%clk 0:09:15.3]} 10... e4 {[%clk 0:09:21.2]} 0-1
